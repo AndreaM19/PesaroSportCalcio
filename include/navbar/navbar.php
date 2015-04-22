@@ -11,18 +11,20 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">HOME</a></li>
-                <li><a href="#about">L'ASSOCIAZIONE</a></li>
+                <li class="active"><a href="index.php">HOME</a></li>
+                <li><a href="associazione.php">L'ASSOCIAZIONE</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">EVENTI <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">EVENTI SPORTIVI</a></li>
+                    	<li><a href="#">TORNEI</a></li>
+                        <li><a href="#">CAMPIONATI</a></li>
+                        <li><a href="#">MANIFESTAZIONI SPORTIVE</a></li>
                         <li><a href="#">CORSI DI FORMAZIONE</a></li>
-                        <li><a href="#">MANIFESTAZIONI CULTURALI</a></li>
+                        <li><a href="#">EVENTI CULTURALI</a></li>
                     </ul>
                 </li>
                 <li><a href="#contact">I NOSTRI CIRCOLI</a></li>
-                <li><a href="#contact">CONTATTI</a></li>
+                <li><a href="contact.php">CONTATTI</a></li>
             </ul>
         </div>
     </div>
