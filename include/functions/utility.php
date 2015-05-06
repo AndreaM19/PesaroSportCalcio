@@ -19,4 +19,3 @@ function eventType($type){
 			break;
 	}
 }
-

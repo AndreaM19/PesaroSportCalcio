@@ -54,8 +54,13 @@
         <div class="col-md-7 container-main">
             <h1>CIRCOLI</h1>
             <div class="col-md-12 divider"></div>
-            <p>Qui trovi un elenco dei circoli affiliati all'associazione Pesaro Sport Calcio</p>
+            <p>
+            	Qui trovi un elenco dei circoli affiliati all'associazione Pesaro Sport Calcio
+                <br><br>
+                <b>Clicca sui segnalibro per vedere le informazioni di ogni corcolo</b>
+            </p>
             
+            <iframe width="100%" height="500" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col2+from+1vMDbs0NKr_LONgWMm3w93Noe7KLKD8WhR3-o-Ra9&amp;viz=MAP&amp;h=false&amp;lat=43.85674673997203&amp;lng=12.986724487304627&amp;t=1&amp;z=10&amp;l=col2&amp;y=2&amp;tmplt=2&amp;hml=GEOCODABLE"></iframe>
         
         </div>
         

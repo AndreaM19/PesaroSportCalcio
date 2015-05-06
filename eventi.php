@@ -40,6 +40,12 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script>
+	function reload() {
+		var loc = $('#eventSelector').find(":selected").val();
+		location.href = "eventi.php?type="+loc;
+	}
+	</script>
 </head>
 
 <body>
@@ -68,18 +74,23 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
             <h1>Eventi:</h1>
             <div class="col-md-12 divider"></div>
             <p>In questa sezione del sito puoi trovare gli eventi organizzati e promossi dall'associazione Pesaro Sport Calcio:</p><br>
-            <h6>Selezione la tipologia di evento da cercare:</h6>
+            
             
             <div class="col-md-12 text-center">
+            <h5>Naviga tra gli eventi:</h5>
+            <select class="form-control" style="max-width:300px; margin:0 auto;" onChange="reload()" id="eventSelector">
                 <?php
                 $queryText = $SHOW_EVENT_TYPE;
                 $query = queryToDB ($conn, $queryText);
                 while ($row = mysqli_fetch_array($query)){
-                    echo"<button type='button' class='btn btn-warning' aria-expanded='false' style='margin:5px;'>".$row['event_type_name']."</button>";
+                    //echo"<button type='button' class='btn btn-warning' aria-expanded='false' style='margin:5px;'>".$row['event_type_name']."</button>";
+					if($row['event_type_acr']==$_GET['type'])echo"<option value='".$row['event_type_acr']."' selected>".$row['event_type_name']."</option>";
+					else echo"<option value='".$row['event_type_acr']."'>".$row['event_type_name']."</option>";
                 }	
                 freeMemoryAfterQuery($query)
                 ?>
-                <br><br>
+            </select>
+                <br><br><br>
             </div>
             
             

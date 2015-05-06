@@ -13,6 +13,13 @@
 
 <div class="col-md-12 divider"></div>
 
+<div class="sidebar-module sidebar-module-inset">
+    <h3>Richiedi la tessetra 2015!!</h3>
+    <p>Scopri come ottenere la tessera ed entrare a far parte dell'associazione <b>Pesaro Sport Calcio</b> - <a href="#">Clicca qui</a></p>
+</div>
+
+<div class="col-md-12 divider"></div>
+
 <div class="sidebar-module">
     <h4>Archivio eventi</h4>
     <ol class="list-unstyled">
