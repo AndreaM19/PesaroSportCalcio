@@ -11,7 +11,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.php">HOME</a></li>
+                <li><a href="index.php">HOME</a></li>
                 <li><a href="associazione.php">L'ASSOCIAZIONE</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">EVENTI <span class="caret"></span></a>
@@ -23,7 +23,7 @@
                         <li><a href="eventi.php?type=cultura">EVENTI CULTURALI</a></li>
                     </ul>
                 </li>
-                <li><a href="#contact">I NOSTRI CIRCOLI</a></li>
+                <li><a href="circoli.php">I NOSTRI CIRCOLI</a></li>
                 <li><a href="contatti.php">CONTATTI</a></li>
             </ul>
         </div>

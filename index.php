@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
+    <meta name="description" content="Pesaro Sport Calcio è un'associazione sportiva che promuove e organizza eventi sportivi e culturali nella città di Pesaro legati al mondo del calcio e non solo.">
+    <meta name="keywords" content="Pesaro, Sport, Calcio, Calcetto, Torneo, Campionato, CSAIN, Eventi Sportivi, Manifestazioni, Marche, Italia">
     <meta name="author" content="Andrea Marchetti">
     <link rel="icon" href="img/icon/favicon.ico">
     
@@ -31,6 +32,7 @@
 
 <body>
 	
+	
     <!-- Navbar -->
     <?php
 	include("include/navbar/navbar.php");
@@ -47,123 +49,93 @@
     	<!--<img src="img/carousel/1.jpg" class="img-responsive">-->
     </div>
     
-    <!-- Left -->
-    <div class="col-md-1"></div>
-    
-    <!-- Main container -->
-    <div class="col-md-7 container-main">
-        <h1>I PROSSIMI EVENTI DEL CALENDARIO</h1>
-        <div class="col-md-12 divider"></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    
-        <div class="col-md-8 event" style="background-image:url(img/events/4.jpg);">
-            <div class="info">
-                <h1>CALCIO A 8</h1>
-                <span class="label label-success">16/04/2015</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
-            </div>
-        </div>
+    <div class=" container-fluid">
+        <!-- Left -->
+        <div class="col-md-1"></div>
         
-        <div class="col-md-4 event" style="background-image:url(img/events/5.jpg);">
-            <div class="info">
-                <h1>TORNEO CALCETTO</h1>
-                <span class="label label-success">16/04/2015</span>
-                <p>Lorem ipsum dolor sit amet. </p>
-                <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
-            </div>
-        </div>
-        
-        <div class="col-md-4 event" style="background-image:url(img/events/6.jpg);">
-            <div class="info">
-                <h1>CALCIO FEMMINILE</h1>
-                <span class="label label-success">16/04/2015</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor aliqua. </p>
-                <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
-            </div>
-        </div>
-        
-        <div class="col-md-8 event" style="background-image:url(img/events/7.jpg);">
-            <div class="info">
-                <h1>BAMBINI</h1>
-                <span class="label label-success">16/04/2015</span>
-                <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
-            </div>
-        </div>
-        
-        <div class="col-md-12">
-            <h1>Informazioni</h1>
+        <!-- Main container -->
+        <div class="col-md-7 container-main">
+            <h1>I PROSSIMI EVENTI DEL CALENDARIO</h1>
+            <div class="col-md-12 divider"></div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
         
-        <div class="col-md-12">
-            <h3>Informazioni secondarie</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        
-        <div class="col-md-12 divider"></div>
-        
-        <div class="col-md-12">
-            <h3>Partners</h3>
-            <div class="col-md-12 text-center partners">
-            <a href="http://www.coni.it/it/" title="CONI" target="_blank"><img src="img/loghi/coni.jpg" title="CONI" alt="CONI"></a>
-            <a href="http://www.csain.it/" title="CSAIn" target="_blank"><img src="img/loghi/CSAIn.jpg" title="CSAIn" alt="CSAIn"></a>
-            <a href="http://www.aics.it/" title="AiCS" target="_blank"><img src="img/loghi/aics.png" title="AiCS" alt="AiCS"></a>
-            <a href="http://www.comune.pesaro.pu.it/" title="Comune di Pesaro" target="_blank"><img src="img/loghi/ComunePesaro.jpg" title="Comune di Pesaro" alt="Comune di Pesaro"></a>
-            <a href="http://www.regione.marche.it/" title="Regione Marche" target="_blank"><img src="img/loghi/RegioneMarche.jpg" title="Regione Marche" alt="Regione Marche"></a>
-            <a href="http://www.confindustria.pu.it/" title="Confindustria Pesaro Urbino" target="_blank"><img src="img/loghi/ConfindustriaPU.png" title="Confindustria Pesaro Urbino" alt="Confindustria Pesaro Urbino"></a>
+            <div class="col-md-12 event" style="background-image:url(img/events/4.jpg);">
+                <div class="info">
+                    <h1>CALENDARIO EVENTI SPORTIVI</h1>
+                    <p>Entra in questa sezione per conoscere tutte le date degli eventi sportivi organizzati dall'associazione. Troverai informazioni per tornei e  campionati di tutti gli sport che possono praticare i nostri soci.</p>
+                    <p><a class="btn btn-info" href="eventi.php?type=sport" role="button">Vedi i dettagli &raquo;</a></p>
+                </div>
             </div>
+            <!--
+            <div class="col-md-4 event" style="background-image:url(img/events/5.jpg);">
+                <div class="info">
+                    <h1>TORNEO CALCETTO</h1>
+                    <span class="label label-success">16/04/2015</span>
+                    <p>Lorem ipsum dolor sit amet. </p>
+                    <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
+                </div>
+            </div>
+            -->
+            <div class="col-md-7 event" style="background-image:url(img/events/6.jpg);">
+                <div class="info">
+                    <h1>CORSI DI FORMAZIONE</h1>
+                    <p>In questa sezione troverai tutte le informazioni relative ai corsi di formazione sportiva organizzati dall'asociazione.</p>
+                    <p><a class="btn btn-info" href="eventi.php?type=formazione" role="button">Vedi i dettagli &raquo;</a></p>
+                </div>
+            </div>
+            
+            <div class="col-md-5 event" style="background-image:url(img/events/7.jpg);">
+                <div class="info">
+                    <h1>MANIFESTAZIONI CULTURALI</h1>
+                    <p>Pesaro Sport Calcio non è solo un'associazione sportiva ma anche un'associazione culturale, trovi tutte le informazioni in questa sezione del sito.</p>
+                    <p><a class="btn btn-info" href="eventi.php?type=cultura" role="button">Vedi i dettagli &raquo;</a></p>
+                </div>
+            </div>
+            
+            <div class="col-md-12">
+                <h1>Informazioni</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            
+            <div class="col-md-12">
+                <h3>Informazioni secondarie</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            
+            <div class="col-md-12 divider"></div>
+            
+            <div class="col-md-12">
+                <h3>Partners</h3>
+                <div class="col-md-12 text-center partners">
+                    <a href="http://www.coni.it/it/" title="CONI" target="_blank"><img src="img/loghi/coni.jpg" title="CONI" alt="CONI"></a>
+                    <a href="http://www.csain.it/" title="CSAIn" target="_blank"><img src="img/loghi/CSAIn.jpg" title="CSAIn" alt="CSAIn"></a>
+                    <a href="http://www.aics.it/" title="AiCS" target="_blank"><img src="img/loghi/aics.png" title="AiCS" alt="AiCS"></a>
+                    <a href="http://www.comune.pesaro.pu.it/" title="Comune di Pesaro" target="_blank"><img src="img/loghi/ComunePesaro.jpg" title="Comune di Pesaro" alt="Comune di Pesaro"></a>
+                    <a href="http://www.regione.marche.it/" title="Regione Marche" target="_blank"><img src="img/loghi/RegioneMarche.jpg" title="Regione Marche" alt="Regione Marche"></a>
+                    <a href="http://www.confindustria.pu.it/" title="Confindustria Pesaro Urbino" target="_blank"><img src="img/loghi/ConfindustriaPU.png" title="Confindustria Pesaro Urbino" alt="Confindustria Pesaro Urbino"></a>
+                </div>
+            </div>
+        
         </div>
+        
+        <br><br>
+        
+        <!-- Sidebar -->
+        <div class="col-md-3">
+            <div class="sidebar-module sidebar-module-inset">
+                <h3>Richiedi la tessetra 2015!!</h3>
+                <p>Scopri come ottenere la tessera ed entrare a far parte dell'associazione <b>Pesaro Sport Calcio</b> - <a href="#">Clicca qui</a></p>
+            </div>
+            <div class="col-md-12 divider"></div>
+            <?php
+                include("include/sidebar/side.php");
+            ?> 
+        </div>
+        
+        <!-- Right -->
+        <div class="col-md-1"></div>
     
     </div>
-    
-    <br><br>
-    
-    <!-- Sidebar -->
-    <div class="col-md-3">
-        <div class="sidebar-module sidebar-module-inset">
-            <h3>Richiedi la tessetra!!</h3>
-            <p>Scopri come ottenere la tessera ed entrare a far parte dell'associazione - <a href="#">Clicca qui</a></p>
-        </div>
-        
-        <div class="col-md-12 divider"></div>
-        
-        <div class="sidebar-module">
-        <h4>Archivio eventi</h4>
-        <ol class="list-unstyled">
-          <li><a href="#">March 2015</a></li>
-          <li><a href="#">February 2015</a></li>
-          <li><a href="#">January 2015</a></li>
-          <li><a href="#">December 2014</a></li>
-          <li><a href="#">November 2014</a></li>
-        </ol>
-      </div>
-      
-      <div class="col-md-12 divider"></div>
-      
-      <div class="sidebar-module">
-        <h4>Servizi per i soci</h4>
-        <ol class="list-unstyled">
-          <li><a href="#">Modulistica</li>
-          <li><a href="#">Info tessetramenti</li>
-        </ol>
-      </div>
-      
-      <div class="col-md-12 divider"></div>
-      
-      <div class="sidebar-module">
-        <h4>Social</h4>
-        <ol class="list-unstyled">
-          <li><a href="#">Facebook</li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Instagram</i>
-        </ol>
-      </div>
-    </div>
-    
-    <!-- Right -->
-    <div class="col-md-1"></div>
     
     <?php
 		include("include/footer/footer.html");
