@@ -1,7 +1,16 @@
+<?php
+include("include/functions/utility.php");
+include("include/db/db_data.php");
+include("include/db/db_function.php");
+include("include/db/db_query.php");
+?>
 <?
 //Session
-include 'include/db/db_function.php';
 sec_session_start();
+?>
+<?php
+//connection to database
+$conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
 ?>
 
 <!DOCTYPE html>

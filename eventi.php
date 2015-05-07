@@ -4,15 +4,13 @@ include("include/db/db_data.php");
 include("include/db/db_function.php");
 include("include/db/db_query.php");
 ?>
-
-<?php
-//connection to database
-$conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
-?>
-
 <?
 //Session
 sec_session_start();
+?>
+<?php
+//connection to database
+$conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
 ?>
 
 <!DOCTYPE html>
@@ -80,7 +78,6 @@ sec_session_start();
             <div class="col-md-12 divider"></div>
             <p>In questa sezione del sito puoi trovare gli eventi organizzati e promossi dall'associazione Pesaro Sport Calcio:</p><br>
             
-            
             <div class="col-md-12 text-center">
             <h5>Naviga tra gli eventi:</h5>
             <select class="form-control" style="max-width:300px; margin:0 auto;" onChange="reload()" id="eventSelector">
@@ -97,7 +94,6 @@ sec_session_start();
             </select>
                 <br><br><br>
             </div>
-            
             
             <br>
             <?php

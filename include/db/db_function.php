@@ -20,14 +20,14 @@ function queryToDB($conn, $queryText){
 	else return false;		
 }
 
-/* This function is used to free memory space after queries*/
+/*This function is used to free memory space after queries*/
 function freeMemoryAfterQuery($queryValue){
 	mysqli_free_result($queryValue);
 }
 
 //Start Session
 function sec_session_start() {
-        $session_name = 'sec_session_id'; // Imposta un nome di sessione
+        $session_name = 'admin_session'; // Imposta un nome di sessione
         $secure = false; // Imposta il parametro a true se vuoi usare il protocollo 'https'.
         $httponly = true; // Questo impedirà ad un javascript di essere in grado di accedere all'id di sessione.
         ini_set('session.use_only_cookies', 1); // Forza la sessione ad utilizzare solo i cookie.

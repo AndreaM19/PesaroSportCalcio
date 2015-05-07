@@ -1,8 +1,20 @@
+<?php
+include("include/functions/utility.php");
+include("include/db/db_data.php");
+include("include/db/db_function.php");
+include("include/db/db_query.php");
+include("include/messages/messages.php");
+?>
 <?
 //Session
-include 'include/db/db_function.php';
 sec_session_start();
 ?>
+<?php
+//connection to database
+$conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
+?>
+
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -119,6 +131,7 @@ sec_session_start();
                     <a href="http://www.regione.marche.it/" title="Regione Marche" target="_blank"><img src="img/loghi/RegioneMarche.jpg" title="Regione Marche" alt="Regione Marche"></a>
                     <a href="http://www.confindustria.pu.it/" title="Confindustria Pesaro Urbino" target="_blank"><img src="img/loghi/ConfindustriaPU.png" title="Confindustria Pesaro Urbino" alt="Confindustria Pesaro Urbino"></a>
                 </div>
+                <br><br><br><br><br><br><br>
             </div>
         
         </div>
@@ -152,3 +165,21 @@ sec_session_start();
     <script src="js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
+
+<?php
+	$message;
+	if(isset($_GET['error'])){
+		switch ($_GET['error']) {
+			case "1000":
+				$message=$ERROR_1000;
+				break;
+			case "1001":
+				$message=$ERROR_1001;
+				break;
+			case "1002":
+				$message=$ERROR_1002;
+				break;
+		}
+		if(isset($message)) echo '<script type="text/javascript">alert("'.$message.'");</script>';
+	}
+?>

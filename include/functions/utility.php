@@ -9,13 +9,13 @@ function eventType($type){
 			return "Campionato";
 			break;
 		case "manifestazione":
-			echo "Manifestazione sportiva";
+			return "Manifestazione sportiva";
 			break;
 		case "formazione":
-			echo "Corso di formazione";
+			return "Corso di formazione";
 			break;
 		case "cultura":
-			echo "Evento culturale";
+			return "Evento culturale";
 			break;
 	}
 }

@@ -1,11 +1,18 @@
+<?php
+include("include/functions/utility.php");
+include("include/db/db_data.php");
+include("include/db/db_function.php");
+include("include/db/db_query.php");
+?>
 <?
 //Session
-include 'include/db/db_data.php';
-include 'include/db/db_function.php';
 sec_session_start();
-
 if(login_check(new mysqli($HOST, $USER, $PASSWORD, $DB)));
-else header('Location: ./index.php?error=1');
+else header('Location: ./index.php?error=1000');
+?>
+<?php
+//connection to database
+$conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
 ?>
 
 <!DOCTYPE html>
@@ -88,9 +95,12 @@ else header('Location: ./index.php?error=1');
         <!-- Sidebar -->
         <div class="col-md-3">
             <div class="col-md-12 divider" style="margin-top:29px;"></div>
-            <?php
-                include("include/sidebar/admin_side.php");
-            ?> 
+            <div class="sidebar-module">
+				<?php
+                    include("include/sidebar/admin_side.php");
+                ?> 
+            </div>
+            <div class="col-md-12 divider"></div>
         </div>
         
         <!-- Right -->
