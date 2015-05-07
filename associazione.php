@@ -1,3 +1,8 @@
+<?
+//Session
+include 'include/db/db_function.php';
+sec_session_start();
+?>
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -38,11 +43,6 @@
 	?>
     
     <!--<div class="col-md-12 divider-ciano"></div>-->
-    
-    <!-- Carousel -->
-    <?php
-	//include("include/carousel/carousel.php");
-	?>
     
     <div class="col-lg-12" style="margin-bottom:80px;"></div>
     

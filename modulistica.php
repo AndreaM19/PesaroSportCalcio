@@ -8,6 +8,11 @@ include("include/db/db_function.php");
 $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
 ?>
 
+<?
+//Session
+sec_session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="it">
 <head>

@@ -1,3 +1,8 @@
+<?
+//Session
+include 'include/db/db_function.php';
+sec_session_start();
+?>
 <!DOCTYPE html>
 <html lang="it">
 <head>

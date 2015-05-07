@@ -1,3 +1,13 @@
+<?
+//Session
+include 'include/db/db_data.php';
+include 'include/db/db_function.php';
+sec_session_start();
+
+if(login_check(new mysqli($HOST, $USER, $PASSWORD, $DB)));
+else header('Location: ./index.php?error=1');
+?>
+
 <!DOCTYPE html>
 <html lang="it">
 <head>

@@ -30,6 +30,15 @@ body{
 	background-size:cover;
 }
 
+.banner-small{
+	height:170px;
+	width:100%;
+	overflow:hidden; 
+	background-image:url(../img/banner_small.jpg); 
+	background-repeat:no-repeat; 
+	background-size:cover;
+}
+
 @media (max-width: 999px) {
 	.banner{
 		margin-top:50px;

@@ -6,7 +6,7 @@
     </div>
     <div class="col-md-9">
     	<h5>Nome Amministratore</h5>
-    	<a href="#">Esci</a>
+    	<a href="logout.php">Esci</a>
     </div>
     <br /><br />
 </div>
