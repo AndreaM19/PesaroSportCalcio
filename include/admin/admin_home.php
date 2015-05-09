@@ -11,22 +11,24 @@
     <div class="col-md-4 text-center">
         <label for="nuovoEvento">Inserisci un nuovo evento nel calendario</label>
         <br /><br />
-        <a href="admin.php?loc=" class="btn btn-info btn-lg" id="nuovoEvento">Nuovo evento</a>
+        <a href="admin.php?loc=addevent" class="btn btn-info btn-lg" id="nuovoEvento">Nuovo evento</a>
     </div>
     
     <div class="col-md-4 text-center">
         <label for="modificaEvento">Modifica le informazioni di un evento</label>
         <br /><br />
-        <a href="admin.php?loc=" class="btn btn-info btn-lg" id="modificaEvento">Modifica evento</a>
+        <a href="admin.php?loc=manageevent" class="btn btn-info btn-lg" id="modificaEvento">Gestisci eventi</a>
     </div>
     
     <div class="col-md-4 text-center">
+    	<!--
         <label for="cancellaEvento">Cancella un evento dal calendario</label>
         <br /><br />
         <a href="admin.php?loc=" class="btn btn-danger btn-lg" id="cancellaEvento">Cancella evento</a>
+        -->
     </div>
     
-    
+    <!--
     <br /><br /><br /><br /><br /><br /><br /><br /><br />
     <div class="col-md-12 divider"></div>
     <h4 style="color:#F90;">Sezione Modulistica</h4>
@@ -50,6 +52,7 @@
         <br /><br />
         <a href="admin.php?loc=" class="btn btn-danger btn-lg" id="cancellaEvento">Cancella modulo</a>
     </div>
+    -->
     
     <br /><br /><br /><br /><br /><br /><br /><br /><br />
     <div class="col-md-12 divider"></div>
@@ -66,7 +69,7 @@
     <div class="col-md-4 text-center">
         <label for="modificaUtente">Modifica o elimina un utente</label>
         <br /><br />
-        <a href="admin.php?loc=edituser" class="btn btn-success btn-lg" id="modificaUtente">Gestisci utenti</a>
+        <a href="admin.php?loc=manageuser" class="btn btn-success btn-lg" id="modificaUtente">Gestisci utenti</a>
     </div>
     
     <div class="col-md-4 text-center">

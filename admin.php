@@ -9,7 +9,7 @@ include("include/messages/messages.php");
 //Session
 sec_session_start();
 if(login_check(new mysqli($HOST, $USER, $PASSWORD, $DB)));
-else header('Location: ./index.php?error=1000');
+else header('Location: ./index.php?msg=1000');
 ?>
 <?php
 //connection to database
@@ -84,11 +84,20 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
 					case "message":
                         include("include/admin/admin_messages.php");
                         break;
+					case "addevent":
+                        include("include/admin/admin_nuovo_evento.php");
+                        break;
+					case "manageevent":
+                        include("include/admin/admin_gestisci_evento.php");
+                        break;
                     case "adduser":
                         include("include/admin/admin_nuovo_utente.php");
                         break;
-                    case "edituser":
+                    case "manageuser":
                         include("include/admin/admin_gestisci_utente.php");
+                        break;
+					case "edituser":
+                        include("include/admin/admin_modifica_utente.php");
                         break;
                     default:
                         include("include/admin/admin_home.php");

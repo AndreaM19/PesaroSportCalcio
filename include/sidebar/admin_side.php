@@ -4,14 +4,16 @@
 </div>
 <div class="col-md-9 text-center">
 	<?php
+	/*
 	$queryText=$GET_NAME_SURNAME;
 	$query = queryToDB ($conn, $queryText);
 	while ($row = mysqli_fetch_array($query)){
 		echo"<h5>".$row['name']." ".$row['surname']."</h5>";
 	}	
 	freeMemoryAfterQuery($query)
+	*/
 	?>
-    <!--<h5>Nome Amministratore</h5>-->
+    <h5>Utente Amministratore</h5>
     <a href="admin.php">Amministra il sito</a>
     <br />
     <a href="logout.php"><b>Esci</b></a>
