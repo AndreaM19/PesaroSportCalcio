@@ -10,5 +10,6 @@ $SHOW_CAT_EVENTS="select event_date, event_title, event_description, sport_name,
 
 //User data
 $GET_NAME_SURNAME="select name, surname from members";
+$GET_USER_DATA="select id, email, name, surname from members";
 
 

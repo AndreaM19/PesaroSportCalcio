@@ -3,6 +3,7 @@ include("include/functions/utility.php");
 include("include/db/db_data.php");
 include("include/db/db_function.php");
 include("include/db/db_query.php");
+include("include/messages/messages.php");
 ?>
 <?
 //Session
@@ -39,6 +40,11 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/ie-emulation-modes-warning.js"></script>
+    <!-- Utility -->
+    <script src="js/utility.js"></script>
+    
+    <script type="text/javascript" src="js/sha512.js"></script>
+	<script type="text/javascript" src="js/forms.js"></script>
     
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -70,18 +76,19 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
         
         <!-- Main container -->
         <div class="col-md-7 container-main">
-            <h1>Pannello di amministrazione</h1>
-            <div class="col-md-12 divider"></div>
             <?php
                 switch (@$_GET['loc']) {
                     case "home":
                         include("include/admin/admin_home.php");
                         break;
-                    case 1:
-                        include("include/admin/admin_home.php");
+					case "message":
+                        include("include/admin/admin_messages.php");
                         break;
-                    case 2:
-                        include("include/admin/admin_home.php");
+                    case "adduser":
+                        include("include/admin/admin_nuovo_utente.php");
+                        break;
+                    case "edituser":
+                        include("include/admin/admin_gestisci_utente.php");
                         break;
                     default:
                         include("include/admin/admin_home.php");

@@ -13,7 +13,7 @@ if(isset($_POST['email'], $_POST['p'])) {
    	}
 	else {
       // Login fallito
-      header('Location: ./login.php?error=1');
+      header('Location: ./index.php?msg=1001');
    	}
 } 
 else { 

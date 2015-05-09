@@ -168,8 +168,8 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
 
 <?php
 	$message;
-	if(isset($_GET['error'])){
-		switch ($_GET['error']) {
+	if(isset($_GET['msg'])){
+		switch ($_GET['msg']) {
 			case "1000":
 				$message=$ERROR_1000;
 				break;

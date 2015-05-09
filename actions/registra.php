@@ -19,8 +19,8 @@ if(@$_GET['rl']==1){
 		$insert_stmt->bind_param('ssssss', $username, $email, $password, $random_salt, $name, $surname); 
 		// Esegui la query ottenuta.
 		$insert_stmt->execute();
-		header('Location: ./admin.php?loc=message&msg=2000');
+		echo"<script>location.href='../admin.php?loc=message&msg=2000'</script>";
 	}
-	else header('Location: ./admin.php?loc=message&msg=1002');
+	else echo"<script>location.href='../admin.php?loc=message&msg=1002'</script>";
 }
 ?>
