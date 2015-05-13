@@ -76,7 +76,7 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
             <div class="col-md-12 divider"></div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         
-            <div class="col-md-12 event" style="background-image:url(img/events/4.jpg);">
+            <div class="col-md-12 event-home" style="background-image:url(img/events/4.jpg);">
                 <div class="info">
                     <h1>CALENDARIO EVENTI SPORTIVI</h1>
                     <p>Entra in questa sezione per conoscere tutte le date degli eventi sportivi organizzati dall'associazione. Troverai informazioni per tornei e  campionati di tutti gli sport che possono praticare i nostri soci.</p>
@@ -93,7 +93,7 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
                 </div>
             </div>
             -->
-            <div class="col-md-7 event" style="background-image:url(img/events/6.jpg);">
+            <div class="col-md-7 event-home" style="background-image:url(img/events/6.jpg);">
                 <div class="info">
                     <h1>CORSI DI FORMAZIONE</h1>
                     <p>In questa sezione troverai tutte le informazioni relative ai corsi di formazione sportiva organizzati dall'asociazione.</p>
@@ -101,7 +101,7 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
                 </div>
             </div>
             
-            <div class="col-md-5 event" style="background-image:url(img/events/7.jpg);">
+            <div class="col-md-5 event-home" style="background-image:url(img/events/7.jpg);">
                 <div class="info">
                     <h1>MANIFESTAZIONI CULTURALI</h1>
                     <p>Pesaro Sport Calcio non è solo un'associazione sportiva ma anche un'associazione culturale, trovi tutte le informazioni in questa sezione del sito.</p>

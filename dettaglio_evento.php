@@ -74,56 +74,33 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
         
         <!-- Main container -->
         <div class="col-md-7 container-main">
-            <h1>Eventi:</h1>
-            <div class="col-md-12 divider"></div>
-            <p>In questa sezione del sito puoi trovare gli eventi organizzati e promossi dall'associazione Pesaro Sport Calcio:</p><br>
-            
-            <div class="col-md-12 text-center">
-            <h5>Naviga tra gli eventi:</h5>
-            <select class="form-control" style="max-width:300px; margin:0 auto;" onChange="reload()" id="eventSelector">
-                <?php
-                $queryText = $SHOW_EVENT_TYPE;
-                $query = queryToDB ($conn, $queryText);
-                while ($row = mysqli_fetch_array($query)){
-                    //echo"<button type='button' class='btn btn-warning' aria-expanded='false' style='margin:5px;'>".$row['event_type_name']."</button>";
-					if($row['event_type_acr']==$_GET['type'])echo"<option value='".$row['event_type_acr']."' selected>".$row['event_type_name']."</option>";
-					else echo"<option value='".$row['event_type_acr']."'>".$row['event_type_name']."</option>";
-                }	
-                freeMemoryAfterQuery($query)
-                ?>
-            </select>
-                <br><br><br>
-            </div>
-            
-            <br>
+            <h1>Dettagli evento:</h1>
+            <div class="col-md-12 divider"></div>            
             <?php
-            if(@$_GET['type']=="sport") $queryText=$SHOW_ALL_SPORT_EVENTS;
-            else $queryText=$SHOW_CAT_EVENTS;
-            
+            $queryText=$SHOW_EVENT_DATA;
             $query=queryToDB($conn,$queryText);
-            $count=0;
             while ($row=mysqli_fetch_array($query)) :
             ?>
             <br>
             <div class="col-md-12 event-displayer">
-            	<div class="col-md-2">	
-                	<img src="files/locandine/img-test.jpg" class="img-responsive">
+            	<div class="col-md-12">	
+                	<h4><?php echo $row['event_date']." ".$row['event_title']; ?></h4>
+                	<img src="files/locandine/img-test.jpg" class="img-responsive" style="margin:0 auto; margin-bottom:30px;">
                 </div>
-                <div class="col-md-10">
-                    <h4><?php echo $row['event_date']." ".$row['event_title']; ?></h4>
+                <div class="col-md-12">
                     <h5>Categoria: <?php echo $row['event_type_name']." ".$row['sport_name']; ?></h5>
-                    <p><?php echo $row['event_short_description']; ?></p>
-                    <a href="dettaglio_evento.php?eventid=<?php echo $row['id_event'] ?>">Clicca qui per i dettagli dell'evento</a>
+                    <br>
+                    <h6>Informazioni sull'evento:</h6>
+                    <p><?php echo $row['event_infos']; ?></p>
                 </div>
             </div>
             <?php
-                $count++;
             endwhile
             ;
             freeMemoryAfterQuery($query);
-            if ($count == 0)
-                echo "<br><br><h5>Nessun evento in programma per questa tipologia</h5><br><br>";
-            ?>        
+            ?>
+
+        
         </div>
         
         <br><br>

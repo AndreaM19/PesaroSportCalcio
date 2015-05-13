@@ -2,7 +2,7 @@
 <div class="col-md-12 divider"></div>
 
 <div class="admin-home">
-    <p><b>Seleziona l'utente da modificare dall'elenco</b></p>
+    <p><b>Seleziona l'utente dall'elenco</b></p>
     <br />
     
     <div class="table-responsive">

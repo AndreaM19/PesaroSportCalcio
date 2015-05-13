@@ -1,8 +1,8 @@
-<h1>Modifica utente</h1>
+<h1>Modifica evento</h1>
 <div class="col-md-12 divider"></div>
 
 <div class="admin-home">
-    <p><b>Seleziona l'utente da modificare dall'elenco</b></p>
+    <p><b>Seleziona l'evento dall'elenco</b></p>
     <br />
     
     <div class="table-responsive">
@@ -19,13 +19,13 @@
             </thead>
 			<?php
 			
-            $queryText=$SHOW_ALL_SPORT_EVENTS;
+            $queryText=$SHOW_ALL_EVENTS;
             $query = queryToDB ($conn, $queryText);
             while ($row = mysqli_fetch_array($query)){
 				echo"<tr>";
 					echo"<td>".$row['event_date']."</td>";
 					echo"<td>".$row['event_title']."</td>";
-					echo"<td>".$row['event_description']."</td>";
+					echo"<td>".$row['event_short_description']."</td>";
 					echo"<td>".$row['sport_name']."</td>";
 					echo"<td>".$row['event_type_name']."</td>";
 					echo"<td>
