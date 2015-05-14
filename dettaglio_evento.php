@@ -34,6 +34,10 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
     <link href="css/style.css" rel="stylesheet">
     <link href="css/carousel.css" rel="stylesheet">
     
+    <!-- Lightbox 2 -->
+	
+	<link rel="stylesheet" href="css/lightbox.css">
+    
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/ie-emulation-modes-warning.js"></script>
@@ -83,27 +87,37 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
             ?>
             <br>
             <div class="col-md-12 event-displayer">
-            	<div class="col-md-12">	
-                	<h4><?php echo $row['event_date']." ".$row['event_title']; ?></h4>
-                	<img src="files/locandine/img-test.jpg" class="img-responsive" style="margin:0 auto; margin-bottom:30px;">
-                </div>
-                <div class="col-md-12">
-                    <h5>Categoria: <?php echo $row['event_type_name']." ".$row['sport_name']; ?></h5>
-                    <br>
-                    <h6>Informazioni sull'evento:</h6>
-                    <p><?php echo $row['event_infos']; ?></p>
-                </div>
+                <h4><?php echo $row['event_date']." ".$row['event_title']; ?></h4>
+                <img src="<?php echo $row['event_flyer'] ?>" class="img-responsive" style="margin:0 auto; margin-bottom:30px;">
+                <h5>Categoria: <?php echo $row['event_type_name']." ".$row['sport_name']; ?></h5>
+                <br>
+                <h6>Informazioni sull'evento:</h6>
+                <p><?php echo $row['event_infos']; ?></p>
             </div>
             <?php
             endwhile
             ;
             freeMemoryAfterQuery($query);
             ?>
-
-        
+			
+            <div class="col-md-12 gallery">
+                <?php
+                $queryText=$SHOW_EVENT_GALLERY;
+                $query=queryToDB($conn,$queryText);
+                while ($row=mysqli_fetch_array($query)) :
+                ?>
+                <div class="col-md-3 image-container">	
+                    <a href="<?php echo $row['picture_path'];?>" data-lightbox="example-set"><img src="<?php echo $row['picture_path'];?>" class="img-thumbnail"></a>
+                </div>
+                <?php
+                endwhile
+                ;
+                freeMemoryAfterQuery($query);
+                ?>
+        	</div>
         </div>
         
-        <br><br>
+        <br><br>        
         
         <!-- Sidebar -->
         <div class="col-md-3">
@@ -130,6 +144,9 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
     
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+    
+    <!-- Lightbox 2 -->
+    <script src="js/lightbox.js"></script>
 </body>
 </html>
 <?php
