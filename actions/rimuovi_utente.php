@@ -1,8 +1,9 @@
 <?php
 include '../include/db/db_data.php';
+include '../include/db/db_query.php';
 if(@$_GET['rl']==1){
 	$mysqli = new mysqli($HOST, $USER, $PASSWORD, $DB);
-	if ($remove_stmt = $mysqli->prepare("DELETE FROM members WHERE id=".$_GET['userid']."")) {    
+	if ($remove_stmt = $mysqli->prepare($DELETE_USER)) {    
 		// Esegui la query ottenuta.
 		$remove_stmt->execute();
 		echo"<script>location.href='../admin.php?loc=message&msg=2001'</script>";

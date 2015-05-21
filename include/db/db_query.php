@@ -18,11 +18,17 @@ $SHOW_EVENT_GALLERY="select * from event_picture inner join event_gallery on id_
 
 $SHOW_EVENT_GALLERY_2="select * from event_gallery where event_id_event='".@$_GET['eventid']."'";
 
-//User data
+//Gallery
+$SHOW_GALLERY="select * from event_gallery where event_id_event=".@$_GET['eventid']."";
+
+//Users
 $GET_NAME_SURNAME="select name, surname from members";
 
 $GET_USERS_DATA="select id, email, name, surname from members";
 
 $GET_USER_DATA="select id, email, name, surname from members where id=".@$_GET['userid']."";
 
+$DELETE_USER="DELETE FROM members WHERE id=".@$_GET['userid']."";
 
+//Sports
+$SHOW_SPORT_LIST="select * from sport;";

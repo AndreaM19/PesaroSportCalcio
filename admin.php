@@ -90,6 +90,9 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
 					case "manageevent":
                         include("include/admin/admin_gestisci_evento.php");
                         break;
+					case "editgallery":
+                        include("include/admin/admin_gestisci_galleria.php");
+                        break;
                     case "adduser":
                         include("include/admin/admin_nuovo_utente.php");
                         break;

@@ -79,19 +79,19 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
             <p>In questa sezione del sito puoi trovare gli eventi organizzati e promossi dall'associazione Pesaro Sport Calcio:</p><br>
             
             <div class="col-md-12 text-center">
-            <h5>Naviga tra gli eventi:</h5>
-            <select class="form-control" style="max-width:300px; margin:0 auto;" onChange="reload()" id="eventSelector">
-                <?php
-                $queryText = $SHOW_EVENT_TYPE;
-                $query = queryToDB ($conn, $queryText);
-                while ($row = mysqli_fetch_array($query)){
-                    //echo"<button type='button' class='btn btn-warning' aria-expanded='false' style='margin:5px;'>".$row['event_type_name']."</button>";
-					if($row['event_type_acr']==$_GET['type'])echo"<option value='".$row['event_type_acr']."' selected>".$row['event_type_name']."</option>";
-					else echo"<option value='".$row['event_type_acr']."'>".$row['event_type_name']."</option>";
-                }	
-                freeMemoryAfterQuery($query)
-                ?>
-            </select>
+                <h5>Naviga tra gli eventi:</h5>
+                <select class="form-control" style="max-width:300px; margin:0 auto;" onChange="reload()" id="eventSelector">
+                    <?php
+                    $queryText = $SHOW_EVENT_TYPE;
+                    $query = queryToDB ($conn, $queryText);
+                    while ($row = mysqli_fetch_array($query)){
+                        //echo"<button type='button' class='btn btn-warning' aria-expanded='false' style='margin:5px;'>".$row['event_type_name']."</button>";
+                        if($row['event_type_acr']==$_GET['type'])echo"<option value='".$row['event_type_acr']."' selected>".$row['event_type_name']."</option>";
+                        else echo"<option value='".$row['event_type_acr']."'>".$row['event_type_name']."</option>";
+                    }	
+                    freeMemoryAfterQuery($query)
+                    ?>
+                </select>
                 <br><br><br>
             </div>
             

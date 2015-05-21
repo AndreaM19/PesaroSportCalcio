@@ -6,17 +6,76 @@
     <br />
     
     <form action="actions/registra.php?rl=1" method="post" name="new_user_form">
-    	<label for="title">Titolo dell'evento</label>
-    	<input type="text" name="title" id="title" class="form-control" required="required"/><br />
-    	<!--Conferma password: <input type="password" name="p_c" id="password_confirm"/><br />-->
-        <br />
-        <a href="admin.php" class="btn btn-danger">Annulla</a>
-		<!--<input type="submit" value="Registra" class="btn btn-info" onclick="return confirmData()"/>-->
-        <input type="button" value="Registra" class="btn btn-info" onclick="formhash(this.form, this.form.password);" />
+    	<div class="col-md-12">
+            <label for="title">Titolo dell'evento</label>
+            <input type="text" name="title" id="title" class="form-control" maxlength="100" required="required"/><br />
+            <br />
+            <label for="date">Data</label>
+            <input type="text" name="date" id="date" class="form-control" required="required"/><br />
+            <br />        
+        </div>
+        <div class="col-md-6">
+        	<label for="eventCat">Categoria evento</label>
+            <select class="form-control" id="eventCat" name="eventCat">
+                <?php
+                $queryText = $SHOW_EVENT_TYPE;
+                $query = queryToDB ($conn, $queryText);
+                while ($row = mysqli_fetch_array($query)){
+                    echo"<option value='".$row['event_type_acr']."'>".$row['event_type_name']."</option>";
+                }	
+                freeMemoryAfterQuery($query)
+                ?>
+            </select>
+            <br />
+        </div>
+        
+        <div class="col-md-6">
+        	<label for="eventSport">Sport</label>
+            <select class="form-control" id="eventSport" name="eventSport">
+                <?php
+                $queryText = $SHOW_SPORT_LIST;
+                $query = queryToDB ($conn, $queryText);
+                while ($row = mysqli_fetch_array($query)){
+					echo"<option value='".$row['sport_name']."'>".$row['sport_name']."</option>";
+                }	
+                freeMemoryAfterQuery($query)
+                ?>
+            </select>
+            <br />
+        </div>
+        
+        <div class="col-md-4">
+        	<br />
+        	<label for="exampleInputFile">Locandina dell'evento</label>
+        </div>
+        <div class="col-md-8">
+        	<br />
+        	<input type="file" id="exampleInputFile">
+        </div>
+        
+        <div class="col-md-12">
+        	<br />
+            <br />
+        	<label for="shortDescription">Breve descrizione dell'evento (Max 250 caratteri)</label>
+        	<textarea class="form-control" rows="4" id="shortDescription"></textarea>
+        </div>
+        
+        <div class="col-md-12">
+        	<br />
+        	<label for="description">Descrizione completa dell'evento</label>
+        	<textarea class="form-control" rows="10" id="description"></textarea>
+        </div>
+        
+        <div class="col-md-12">
+        	<br />
+        	<a href="admin.php" class="btn btn-danger">Annulla</a>
+			<!--<input type="submit" value="Registra" class="btn btn-info" onclick="return confirmData()"/>-->
+        	<input type="submit" value="Inserisci evento" class="btn btn-info" />
+        </div>
     </form>
     
-    <!-- onclick="formhash(this.form, this.form.password);" -->
-    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <div class="col-md-12" style="height:80px;">
+    </div>
 
 </div>
 

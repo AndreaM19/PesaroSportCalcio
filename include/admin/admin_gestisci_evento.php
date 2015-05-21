@@ -11,7 +11,7 @@
                 <tr>
                     <th>Data</th>
                     <th>Titolo</th>
-                    <th>Descrizione</th>
+                    <!--<th>Descrizione</th>-->
                     <th>Sport</th>
                     <th>Tipologia</th>
                     <th>Actions</th>
@@ -25,13 +25,14 @@
 				echo"<tr>";
 					echo"<td>".$row['event_date']."</td>";
 					echo"<td>".$row['event_title']."</td>";
-					echo"<td>".$row['event_short_description']."</td>";
+					//echo"<td>".$row['event_short_description']."</td>";
 					echo"<td>".$row['sport_name']."</td>";
 					echo"<td>".$row['event_type_name']."</td>";
 					echo"<td>
-							<a href='admin.php?loc=edituser&userid=".$row['id_event']."'><span class='glyphicon glyphicon-pencil' aria-hidden='true'></span></a>
+							<a href='admin.php?loc=editevent&eventid=".$row['id_event']."' title='".$EDIT_EVENT."'><span class='glyphicon glyphicon-pencil' aria-hidden='true'></span></a>
 							&nbsp;&nbsp;
-							<a href='actions/rimuovi_utente.php?rl=1&userid=".$row['id_event']."' onclick='return confirmAction()'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></a>
+							<a href='admin.php?loc=editgallery&eventid=".$row['id_event']."' title='".$GALLERY_EVENT."'><span class='glyphicon glyphicon-picture' aria-hidden='true'></span></a>&nbsp;&nbsp;
+							<a href='actions/rimuovi_utente.php?rl=1&eventid=".$row['id_event']."' title='".$DELETE_EVENT."' onclick='return confirmAction()'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></a>
 						</td>";
 				echo"</tr>";
 			}	

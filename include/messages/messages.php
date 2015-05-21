@@ -15,3 +15,8 @@ $SUCCESS_2002="";
 $CONFIRM_3000="I dati verranno inseriti nel sistema, continuare?";
 $CONFIRM_3001="";
 $CONFIRM_3002="";
+
+//Tootips
+$EDIT_EVENT="Modifila le informazioni dell&rsquo;evento";
+$DELETE_EVENT="Elimina l&rsquo;evento";
+$GALLERY_EVENT="Gestisci la galleria fotografica dell&rsquo;evento";
