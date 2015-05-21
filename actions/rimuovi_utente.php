@@ -1,5 +1,6 @@
 <?php
 include '../include/db/db_data.php';
+include '../include/functions/utility.php';
 include '../include/db/db_query.php';
 if(@$_GET['rl']==1){
 	$mysqli = new mysqli($HOST, $USER, $PASSWORD, $DB);

@@ -8,7 +8,7 @@ if(@$_GET['rl']==1){
 	$username=$email;
 	$name=$_POST['name'];
 	$surname=$_POST['surname'];
-	echo $name." ".$surname;
+	//echo $name." ".$surname;
 	// Crea una chiave casuale
 	$random_salt = hash('sha512', uniqid(mt_rand(1, mt_getrandmax()), true));
 	// Crea una password usando la chiave appena creata.

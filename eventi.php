@@ -89,7 +89,7 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
                         if($row['event_type_acr']==$_GET['type'])echo"<option value='".$row['event_type_acr']."' selected>".$row['event_type_name']."</option>";
                         else echo"<option value='".$row['event_type_acr']."'>".$row['event_type_name']."</option>";
                     }	
-                    freeMemoryAfterQuery($query)
+                    freeMemoryAfterQuery($query);
                     ?>
                 </select>
                 <br><br><br>

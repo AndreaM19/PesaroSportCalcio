@@ -18,6 +18,10 @@ $SHOW_EVENT_GALLERY="select * from event_picture inner join event_gallery on id_
 
 $SHOW_EVENT_GALLERY_2="select * from event_gallery where event_id_event='".@$_GET['eventid']."'";
 
+$NEW_EVENT="INSERT INTO event (event_title, event_date, event_short_description, event_flyer, sport, event_type, event_infos) VALUES ('".@$eventTitle."', '".@$eventDate."', '".@$eventShortDesc."', '".@$eventFlyer."', '".@$eventSport."', '".@$eventType."', '".@$eventInfos."')";
+
+$NEW_EVENT_2="INSERT INTO event (event_title, event_date, event_short_description, event_flyer, sport, event_type, event_infos) VALUES ('ciao', '', 'ciao', 'ciao', 'ciao', 'ciao', 'ciao')";
+
 //Gallery
 $SHOW_GALLERY="select * from event_gallery where event_id_event=".@$_GET['eventid']."";
 

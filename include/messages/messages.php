@@ -9,7 +9,8 @@ $ERROR_1002="Impossibile completare l'operazione";
 //Success
 $SUCCESS_2000="Nuovo utente inserito con successo";
 $SUCCESS_2001="Utente rimosso con successo";
-$SUCCESS_2002="";
+$SUCCESS_2002="Nuovo evento inserito con successo";
+$SUCCESS_2003="Evento rimosso con successo";
 
 //Confirm actions
 $CONFIRM_3000="I dati verranno inseriti nel sistema, continuare?";

@@ -5,7 +5,7 @@
     <p><b>Inserisci i dati di un nuovo evento</p>
     <br />
     
-    <form action="actions/registra.php?rl=1" method="post" name="new_user_form">
+    <form action="actions/inserisci_evento.php?rl=1" method="post" name="new_user_form">
     	<div class="col-md-12">
             <label for="title">Titolo dell'evento</label>
             <input type="text" name="title" id="title" class="form-control" maxlength="100" required="required"/><br />
@@ -21,7 +21,7 @@
                 $queryText = $SHOW_EVENT_TYPE;
                 $query = queryToDB ($conn, $queryText);
                 while ($row = mysqli_fetch_array($query)){
-                    echo"<option value='".$row['event_type_acr']."'>".$row['event_type_name']."</option>";
+                    echo"<option value='".$row['id_event_type']."'>".$row['event_type_name']."</option>";
                 }	
                 freeMemoryAfterQuery($query)
                 ?>
@@ -36,7 +36,7 @@
                 $queryText = $SHOW_SPORT_LIST;
                 $query = queryToDB ($conn, $queryText);
                 while ($row = mysqli_fetch_array($query)){
-					echo"<option value='".$row['sport_name']."'>".$row['sport_name']."</option>";
+					echo"<option value='".$row['id_sport']."'>".$row['sport_name']."</option>";
                 }	
                 freeMemoryAfterQuery($query)
                 ?>
@@ -50,20 +50,20 @@
         </div>
         <div class="col-md-8">
         	<br />
-        	<input type="file" id="exampleInputFile">
+        	<input type="file" id="flyer" name="flyer">
         </div>
         
         <div class="col-md-12">
         	<br />
             <br />
         	<label for="shortDescription">Breve descrizione dell'evento (Max 250 caratteri)</label>
-        	<textarea class="form-control" rows="4" id="shortDescription"></textarea>
+        	<textarea class="form-control" rows="4" id="shortDescription" name="shortDescription"></textarea>
         </div>
         
         <div class="col-md-12">
         	<br />
         	<label for="description">Descrizione completa dell'evento</label>
-        	<textarea class="form-control" rows="10" id="description"></textarea>
+        	<textarea class="form-control" rows="10" id="description" name="description"></textarea>
         </div>
         
         <div class="col-md-12">
