@@ -14,7 +14,7 @@
 	freeMemoryAfterQuery($query)
 	?>
     
-    <form action="actions/" method="post" name="new_user_form">
+    <form action="actions/modifica_utente.php?rl=1&userid=<?php echo $_GET['userid']?>" method="post" name="new_user_form">
     	<label for="name">Nome</label>
     	<input type="text" name="name" id="name" class="form-control" value="<?php echo $array[2] ?>" required="required"/><br />
         <label for="surname">Cognome</label>
