@@ -5,6 +5,9 @@
 	$message;
 	if(isset($_GET['msg'])){
 		switch ($_GET['msg']) {
+			case "1002":
+				$message=$ERROR_1002;
+				break;
 			case "2000":
 				$message=$SUCCESS_2000;
 				break;
@@ -13,6 +16,18 @@
 				break;
 			case "2002":
 				$message=$SUCCESS_2002;
+				break;
+			case "2003":
+				$message=$SUCCESS_2003;
+				break;
+			case "2004":
+				$message=$SUCCESS_2004;
+				break;
+			case "2005":
+				$message=$SUCCESS_2005;
+				break;
+			case "2006":
+				$message=$SUCCESS_2006;
 				break;
 		}
 		if(isset($message)) echo "<h4>".$message."</h4>";

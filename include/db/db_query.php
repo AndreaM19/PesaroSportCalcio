@@ -22,6 +22,8 @@ $NEW_EVENT="INSERT INTO event (event_title, event_date, event_short_description,
 
 $NEW_EVENT_2="INSERT INTO event (event_title, event_date, event_short_description, event_flyer, sport, event_type, event_infos) VALUES ('ciao', '', 'ciao', 'ciao', 'ciao', 'ciao', 'ciao')";
 
+$DELETE_EVENT="DELETE FROM event WHERE id_event=".@$_GET['eventid']."";
+
 //Gallery
 $SHOW_GALLERY="select * from event_gallery where event_id_event=".@$_GET['eventid']."";
 

@@ -12,6 +12,8 @@ $SUCCESS_2001="Utente rimosso con successo";
 $SUCCESS_2002="Nuovo evento inserito con successo";
 $SUCCESS_2003="Evento rimosso con successo";
 $SUCCESS_2004="Evento modificato con successo";
+$SUCCESS_2005="";
+$SUCCESS_2006="";
 
 //Confirm actions
 $CONFIRM_3000="I dati verranno inseriti nel sistema, continuare?";
