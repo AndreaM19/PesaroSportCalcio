@@ -93,6 +93,9 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
 					case "editevent":
                         include("include/admin/admin_modifica_evento.php");
                         break;
+					case "addgallery":
+                        include("include/admin/admin_nuova_galleria.php");
+                        break;
 					case "editgallery":
                         include("include/admin/admin_gestisci_galleria.php");
                         break;

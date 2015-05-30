@@ -19,7 +19,7 @@
 		if($counter==0){
 			echo"<h5>Nessuna galleria fotografica per questo evento</h5>";
 			echo"<br>";
-			echo"<a href='' class='btn btn-info btn-xs' id='addGallery'>Aggiungi una galleria</a>";
+			echo"<a href='admin.php?loc=addgallery&eventid=".$_GET['eventid']."' class='btn btn-info btn-xs' id='addGallery'>Aggiungi una galleria</a>";
 		}
         ?>
     </div>

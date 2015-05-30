@@ -14,18 +14,18 @@ $SHOW_CAT_EVENTS="select id_event, event_date, event_title, event_short_descript
 
 $SHOW_EVENT_DATA="select * from event inner join sport on event.sport=sport.id_sport inner join event_type on event.event_type=event_type.id_event_type where id_event='".@$_GET['eventid']."'";
 
-$SHOW_EVENT_GALLERY="select * from event_picture inner join event_gallery on id_event_gallery=event_gallery_id_event_gallery where event_id_event='".@$_GET['eventid']."'";
+$SHOW_EVENT_GALLERY="select id_event_image, image_path, id_event from event_image inner join event_gallery on event_gallery=id_event_gallery inner join event on id_event_gallery=event.event_gallery where id_event='".@$_GET['eventid']."'";
 
 $SHOW_EVENT_GALLERY_2="select * from event_gallery where event_id_event='".@$_GET['eventid']."'";
 
 $NEW_EVENT="INSERT INTO event (event_title, event_date, event_short_description, event_flyer, sport, event_type, event_infos) VALUES ('".@$eventTitle."', '".@$eventDate."', '".@$eventShortDesc."', '".@$eventFlyer."', '".@$eventSport."', '".@$eventType."', '".@$eventInfos."')";
 
-$NEW_EVENT_2="INSERT INTO event (event_title, event_date, event_short_description, event_flyer, sport, event_type, event_infos) VALUES ('ciao', '', 'ciao', 'ciao', 'ciao', 'ciao', 'ciao')";
-
 $DELETE_EVENT="DELETE FROM event WHERE id_event=".@$_GET['eventid']."";
 
 //Gallery
-$SHOW_GALLERY="select * from event_gallery where event_id_event=".@$_GET['eventid']."";
+$SHOW_GALLERY="select gallery_name, id_event_gallery from event_gallery inner join event on id_event_gallery=event_gallery where id_event=".@$_GET['eventid']."";
+
+$NEW_GALLERY="";
 
 //Users
 $GET_NAME_SURNAME="select name, surname from members";
