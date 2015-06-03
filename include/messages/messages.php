@@ -19,6 +19,8 @@ $SUCCESS_2008="Galleria rimossa con successo";
 $SUCCESS_2009="Galleria modificata con successo";
 $SUCCESS_2010="Sport inserito con successo";
 $SUCCESS_2011="Sport rimosso con successo";
+$SUCCESS_2012="Sponsor inserito con successo";
+$SUCCESS_2013="Sponsor rimosso con successo";
 
 //Confirm actions
 $CONFIRM_3000="I dati verranno inseriti nel sistema, continuare?";
@@ -30,3 +32,4 @@ $EDIT_EVENT="Modifila le informazioni dell&rsquo;evento";
 $DELETE_EVENT="Elimina l&rsquo;evento";
 $GALLERY_EVENT="Gestisci la galleria fotografica dell&rsquo;evento";
 $DELETE_IMAGE="Elimina l'immagine";
+$SPONSOR_EVENT="Gestisci gli sponsor";

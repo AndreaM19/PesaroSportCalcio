@@ -75,7 +75,7 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
         <div class="col-md-1"></div>
         
         <!-- Main container -->
-        <div class="col-md-7 container-main">
+        <div class="col-md-8 container-main">
             <?php
                 switch (@$_GET['loc']) {
                     case "home":
@@ -114,6 +114,9 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
 					case "delsport":
                         include("include/admin/admin_rimuovi_sport.php");
                         break;
+					case "editsponsor":
+                        include("include/admin/admin_gestisci_sponsor.php");
+                        break;
                     default:
                         include("include/admin/admin_home.php");
                         break;
@@ -124,7 +127,7 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
         <br><br>
         
         <!-- Sidebar -->
-        <div class="col-md-3">
+        <div class="col-md-2">
             <div class="col-md-12 divider" style="margin-top:29px;"></div>
             <div class="sidebar-module">
 				<?php

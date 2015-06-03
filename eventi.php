@@ -123,7 +123,7 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
             freeMemoryAfterQuery($query);
             if ($count == 0)
                 echo "<br><br><h5>Nessun evento in programma per questa tipologia</h5><br><br>";
-            ?>        
+            ?>   
         </div>
         
         <br><br>

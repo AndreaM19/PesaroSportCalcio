@@ -13,8 +13,6 @@ sec_session_start();
 $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="it">
 <head>

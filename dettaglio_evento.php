@@ -99,6 +99,20 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
             ;
             freeMemoryAfterQuery($query);
             ?>
+            
+            <div class="col-md-12">
+                <h6>Sponsor dell'evento:</h6>
+                <ul>
+					<?php
+                    $queryText=$SHOW_SPONSOR;
+                    $query=queryToDB($conn,$queryText);
+                    while ($row=mysqli_fetch_array($query)){
+                        echo"<li>".$row['sponsor_name']."</li>";
+                    }
+                    freeMemoryAfterQuery($query);
+                ?>
+                </ul>
+            </div>      
 			
             <div class="col-md-12 gallery">
                 <?php

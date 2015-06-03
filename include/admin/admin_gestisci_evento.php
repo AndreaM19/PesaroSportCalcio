@@ -29,9 +29,9 @@
 					echo"<td>".$row['sport_name']."</td>";
 					echo"<td>".$row['event_type_name']."</td>";
 					echo"<td>
-							<a href='admin.php?loc=editevent&eventid=".$row['id_event']."' title='".$EDIT_EVENT."'><span class='glyphicon glyphicon-pencil' aria-hidden='true'></span></a>
-							&nbsp;&nbsp;
+							<a href='admin.php?loc=editevent&eventid=".$row['id_event']."' title='".$EDIT_EVENT."'><span class='glyphicon glyphicon-pencil' aria-hidden='true'></span></a>&nbsp;&nbsp;
 							<a href='admin.php?loc=editgallery&eventid=".$row['id_event']."' title='".$GALLERY_EVENT."'><span class='glyphicon glyphicon-picture' aria-hidden='true'></span></a>&nbsp;&nbsp;
+							<a href='admin.php?loc=editsponsor&eventid=".$row['id_event']."' title='".$SPONSOR_EVENT."'><span class='glyphicon glyphicon-usd' aria-hidden='true'></span></a>&nbsp;&nbsp;
 							<a href='actions/rimuovi_evento.php?rl=1&eventid=".$row['id_event']."' title='".$DELETE_EVENT."' onclick='return confirmAction()'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></a>
 						</td>";
 				echo"</tr>";

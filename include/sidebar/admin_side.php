@@ -1,8 +1,11 @@
+<!--
 <h4>Amministratore:</h4>
-<div class="col-md-3">
+-->
+<div class="col-md-12 text-center">
     <span class="glyphicon glyphicon-user" aria-hidden="true" style="font-size: 5em; margin:0 auto;"></span>
 </div>
-<div class="col-md-9 text-center">
+
+<div class="col-md-12 text-center">
 	<?php
 	/*
 	$queryText=$GET_NAME_SURNAME;

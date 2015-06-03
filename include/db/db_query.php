@@ -22,6 +22,7 @@ $NEW_EVENT="INSERT INTO event (event_title, event_date, event_short_description,
 
 $DELETE_EVENT="delete from event where id_event=".@$_GET['eventid']."";
 
+//------------------------------------------------------------------------------------------------
 //Gallery
 $SHOW_GALLERY="select gallery_name, id_event_gallery from event_gallery inner join event on id_event_gallery=event_gallery where id_event=".@$_GET['eventid']."";
 
@@ -29,9 +30,11 @@ $NEW_GALLERY="";
 
 $DELETE_GALLERY="delete from event_gallery where id_event_gallery=".@$_GET['galleryid']."";
 
+//------------------------------------------------------------------------------------------------
 //Images
 $DELETE_IMAGE="delete from event_image where id_event_image=".@$_GET['imageid']."";
 
+//------------------------------------------------------------------------------------------------
 //Users
 $GET_NAME_SURNAME="select name, surname from members";
 
@@ -41,7 +44,14 @@ $GET_USER_DATA="select id, email, name, surname from members where id=".@$_GET['
 
 $DELETE_USER="delete from members where id=".@$_GET['userid']."";
 
+//------------------------------------------------------------------------------------------------
 //Sports
 $SHOW_SPORT_LIST="select * from sport order by sport_name";
 
 $DELETE_SPORT="delete from sport where id_sport=".@$_GET['sportid']."";
+
+//------------------------------------------------------------------------------------------------
+//Sponsor
+$SHOW_SPONSOR="select * from sponsor where event_id=".@$_GET['eventid']."";
+
+$DELETE_SPONSOR="delete from sponsor where id_sponsor=".@$_GET['sponsorid']."";
