@@ -28,6 +28,8 @@
         -->
     </div>
     
+    
+    
     <!--
     <br /><br /><br /><br /><br /><br /><br /><br /><br />
     <div class="col-md-12 divider"></div>
@@ -53,6 +55,33 @@
         <a href="admin.php?loc=" class="btn btn-danger btn-lg" id="cancellaEvento">Cancella modulo</a>
     </div>
     -->
+    
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <div class="col-md-12 divider"></div>
+    <h4 style="color:#F60;">Sezione Sport</h4>
+    <p class="text-justify section-info">In questa sezione &egrave; possibile inserire, modificare la lista degli sport gestiti dall'associazione</p>
+    
+    
+    <div class="col-md-4 text-center">
+        <label for="nuovoUtente">Inserisci un nuovo sport</label>
+        <br /><br />
+        <a href="admin.php?loc=addsport" class="btn btn-warning btn-lg" id="nuovoUtente">Nuovo sport</a>
+    </div>
+    
+    <div class="col-md-4 text-center">
+        <label for="modificaUtente">Elimina uno sport</label>
+        <br /><br />
+        <a href="admin.php?loc=delsport" class="btn btn-warning btn-lg" id="modificaUtente">Elimina sport</a>
+    </div>
+    
+    <div class="col-md-4 text-center">
+    	<!--
+        <label for="cancellaUtente">Cancella un utente</label>
+        <br /><br />
+        <a href="admin.php?loc=deleteuser" class="btn btn-danger btn-lg" id="cancellaUtente">Cancella utente</a>
+        -->
+    </div>
+    
     
     <br /><br /><br /><br /><br /><br /><br /><br /><br />
     <div class="col-md-12 divider"></div>

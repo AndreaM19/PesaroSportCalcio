@@ -3,18 +3,17 @@ include("include/functions/utility.php");
 include("include/db/db_data.php");
 include("include/db/db_function.php");
 include("include/db/db_query.php");
-include("include/messages/messages.php");
 ?>
 <?
 //Session
 sec_session_start();
-if(login_check(new mysqli($HOST, $USER, $PASSWORD, $DB)));
-else header('Location: ./index.php?msg=1000');
 ?>
 <?php
 //connection to database
 $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="it">
@@ -40,11 +39,6 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/ie-emulation-modes-warning.js"></script>
-    <!-- Utility -->
-    <script src="js/utility.js"></script>
-    
-    <script type="text/javascript" src="js/sha512.js"></script>
-	<script type="text/javascript" src="js/forms.js"></script>
     
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -70,55 +64,28 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
     <div class="col-lg-12" style="margin-bottom:80px;"></div>
     
     <div class=" container-fluid">
-    
         <!-- Left -->
         <div class="col-md-1"></div>
         
         <!-- Main container -->
         <div class="col-md-7 container-main">
+            <h1>I NOSTRI SPORT</h1>
+            <div class="col-md-12 divider"></div>
+            <p>
+            	Qui trovi l'elenco completo degli sport praticabili con la tessera Pesaro Sport Calcio
+            </p>
+            
+            <ul>
             <?php
-                switch (@$_GET['loc']) {
-                    case "home":
-                        include("include/admin/admin_home.php");
-                        break;
-					case "message":
-                        include("include/admin/admin_messages.php");
-                        break;
-					case "addevent":
-                        include("include/admin/admin_nuovo_evento.php");
-                        break;
-					case "manageevent":
-                        include("include/admin/admin_gestisci_evento.php");
-                        break;
-					case "editevent":
-                        include("include/admin/admin_modifica_evento.php");
-                        break;
-					case "addgallery":
-                        include("include/admin/admin_nuova_galleria.php");
-                        break;
-					case "editgallery":
-                        include("include/admin/admin_gestisci_galleria.php");
-                        break;
-                    case "adduser":
-                        include("include/admin/admin_nuovo_utente.php");
-                        break;
-                    case "manageuser":
-                        include("include/admin/admin_gestisci_utente.php");
-                        break;
-					case "edituser":
-                        include("include/admin/admin_modifica_utente.php");
-                        break;
-					case "addsport":
-                        include("include/admin/admin_nuovo_sport.php");
-                        break;
-					case "delsport":
-                        include("include/admin/admin_rimuovi_sport.php");
-                        break;
-                    default:
-                        include("include/admin/admin_home.php");
-                        break;
-                }
-            ?> 
+			$queryText = $SHOW_SPORT_LIST;
+			$query = queryToDB ($conn, $queryText);
+			while ($row = mysqli_fetch_array($query)){
+				echo"<li>".$row['sport_name']."</li>";
+			}	
+			freeMemoryAfterQuery($query);
+			?>
+            </ul>
+        
         </div>
         
         <br><br>
@@ -126,12 +93,9 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
         <!-- Sidebar -->
         <div class="col-md-3">
             <div class="col-md-12 divider" style="margin-top:29px;"></div>
-            <div class="sidebar-module">
-				<?php
-                    include("include/sidebar/admin_side.php");
-                ?> 
-            </div>
-            <div class="col-md-12 divider"></div>
+            <?php
+                include("include/sidebar/side.php");
+            ?> 
         </div>
         
         <!-- Right -->

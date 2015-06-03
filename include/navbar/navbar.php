@@ -23,7 +23,7 @@
                         <li><a href="eventi.php?type=cultura">EVENTI CULTURALI</a></li>
                     </ul>
                 </li>
-                <li><a href="circoli.php">I NOSTRI CIRCOLI</a></li>
+                <li><a href="sport.php">I NOSTRI SPORT</a></li>
                 <li><a href="contatti.php">CONTATTI</a></li>
             </ul>
         </div>
