@@ -57,7 +57,7 @@
         
         <div class="col-md-4">
         	<br />
-        	<label for="exampleInputFile">Locandina dell'evento</label>
+        	<label for="exampleInputFile">Locandina dell'evento: <?php echo $array[4] ?></label>
         </div>
         <div class="col-md-8">
         	<br />

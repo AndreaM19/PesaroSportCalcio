@@ -15,13 +15,23 @@ if(@$_GET['rl']==1){
 	$eventType=$_POST['eventCat'];
 	$eventInfos=$_POST['description'];
 	
-	if ($update_stmt = $mysqli->prepare("update event set event_title=?, event_date=?, event_short_description=?, event_flyer=?, sport=?, event_type=?, event_infos=? where id_event=?")) {    
-		$update_stmt->bind_param('ssssiisi', $eventTitle, $eventDate, $eventShortDesc, $eventFlyer, $eventSport, $eventType, $eventInfos, $eventId); 
-		// Esegui la query ottenuta.
-		$update_stmt->execute();
-		echo"<script>location.href='../admin.php?loc=message&msg=2004'</script>";
+	if($eventFlyer==""){
+		if ($update_stmt = $mysqli->prepare("update event set event_title=?, event_date=?, event_short_description=?, sport=?, event_type=?, event_infos=? where id_event=?")) {    
+			$update_stmt->bind_param('sssiisi', $eventTitle, $eventDate, $eventShortDesc, $eventSport, $eventType, $eventInfos, $eventId); 
+			// Esegui la query ottenuta.
+			$update_stmt->execute();
+			echo"<script>location.href='../admin.php?loc=message&msg=2004'</script>";
+		}
+		else echo"<script>location.href='../admin.php?loc=message&msg=1002'</script>";		
 	}
-	else echo"<script>location.href='../admin.php?loc=message&msg=1002'</script>";
-	
+	else{
+		if ($update_stmt = $mysqli->prepare("update event set event_title=?, event_date=?, event_short_description=?, event_flyer=?, sport=?, event_type=?, event_infos=? where id_event=?")) {    
+			$update_stmt->bind_param('ssssiisi', $eventTitle, $eventDate, $eventShortDesc, $eventFlyer, $eventSport, $eventType, $eventInfos, $eventId); 
+			// Esegui la query ottenuta.
+			$update_stmt->execute();
+			echo"<script>location.href='../admin.php?loc=message&msg=2004'</script>";
+		}
+		else echo"<script>location.href='../admin.php?loc=message&msg=1002'</script>";
+	}
 }
 ?>

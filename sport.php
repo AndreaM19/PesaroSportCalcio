@@ -72,7 +72,7 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
             <h1>I NOSTRI SPORT</h1>
             <div class="col-md-12 divider"></div>
             <p>
-            	Qui trovi l'elenco completo degli sport praticabili con la tessera Pesaro Sport Calcio
+            	Qui trovi l'elenco completo degli sport praticabili con la tessera Pesaro Sport Calcio sotto forma di tornei, campionati, manifestazioni spotive e eventi di formazione.
             </p>
             
             <ul>
