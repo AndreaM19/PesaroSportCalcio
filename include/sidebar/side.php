@@ -33,8 +33,8 @@
 <div class="sidebar-module">
     <h4>Servizi per i soci</h4>
     <ol class="list-unstyled">
-        <li><a href="modulistica.php">Modulistica</li>
-        <li><a href="#">Info tesseramenti</li>
+        <!--<li><a href="modulistica.php">Modulistica</li>-->
+        <li><a href="info_tessere.php">Info tesseramenti</li>
     </ol>
 </div>
 
@@ -57,8 +57,10 @@
     <h4>Social</h4>
     <ol class="list-unstyled">
         <li><a href="https://www.facebook.com/profile.php?id=100004373267949" target="_blank">Facebook</li>
+        <!--
         <li><a href="#">Twitter</a></li>
         <li><a href="#">Instagram</a></i>
+        -->
     </ol>
 </div>
 
