@@ -88,7 +88,11 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
             <br>
             <div class="col-md-12 event-displayer">
                 <h4><?php echo $row['event_date']." ".$row['event_title']; ?></h4>
-                <img src="files/locandine/<?php echo $row['event_flyer'] ?>" class="img-responsive" style="margin:0 auto; margin-bottom:30px; max-width:500px;">
+                <?php
+					if($row['event_flyer']!=""){
+						echo"<img src='files/locandine/".$row['event_flyer']."' class='img-responsive' style='margin:0 auto; margin-bottom:30px; max-width:100%;'>";	
+					}
+				?>
                 <h5>Categoria: <?php echo $row['event_type_name']." ".$row['sport_name']; ?></h5>
                 <br>
                 <h6>Informazioni sull'evento:</h6>
@@ -120,7 +124,7 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
                 $query=queryToDB($conn,$queryText);
                 while ($row=mysqli_fetch_array($query)) :
                 ?>
-                <div class="col-md-3 image-container">	
+                <div class="col-md-3 image-container text-center">	
                     <a href="files/gallery/<?php echo $row['event_gallery']."/".$row['image_path'];?>" data-lightbox="example-set"><img src="files/gallery/<?php echo $row['event_gallery']."/".$row['image_path'];?>" class="img-thumbnail"></a>
                 </div>
                 <?php

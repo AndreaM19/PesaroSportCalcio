@@ -179,7 +179,14 @@ body{
 }
 
 .gallery .image-container img{
+	margin:0 auto;
 	margin-bottom:25px;
+}
+
+@media (max-width: 999px) {
+	.gallery .image-container img{
+		max-width:60%;
+	}	
 }
 
 .footer{
