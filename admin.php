@@ -117,6 +117,9 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
 					case "editsponsor":
                         include("include/admin/admin_gestisci_sponsor.php");
                         break;
+					case "addimage":
+                        include("include/admin/admin_nuova_immagine.php");
+                        break;
                     default:
                         include("include/admin/admin_home.php");
                         break;

@@ -107,7 +107,7 @@ $conn=connectToDB($HOST,$USER,$PASSWORD,$DB,$PORT);
             <br>
             <div class="col-md-12 event-displayer">
             	<div class="col-md-2">	
-                	<img src="<?php echo $row['event_flyer'] ?>" class="img-responsive">
+                	<img src="files/locandine/<?php echo $row['event_flyer'] ?>" class="img-responsive">
                 </div>
                 <div class="col-md-10">
                     <h4><?php echo $row['event_date']." ".$row['event_title']; ?></h4>

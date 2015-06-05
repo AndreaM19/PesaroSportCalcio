@@ -1,18 +1,17 @@
 <?php ini_set("memory_limit", "200000000"); // for large images so that we do not get "Allowed memory exhausted"?>
 <?php
-
 include '../include/db/db_data.php';
 include '../include/functions/utility.php';
 include '../include/db/db_query.php';
 
-$fileRandName=NULL;
-
 // upload the file
-if ((isset($_POST["submitted_form"])) && ($_POST["submitted_form"] == "new_event_form")) {
+if ((isset($_POST["submitted_form"])) && ($_POST["submitted_form"] == "image_upload_form")) {
 	
 	// file needs to be jpg,gif,bmp,x-png and 4 MB max
-	if (($_FILES["flyer"]["type"] == "image/jpeg" || $_FILES["flyer"]["type"] == "image/pjpeg" || $_FILES["flyer"]["type"] == "image/gif" || $_FILES["flyer"]["type"] == "image/x-png") && ($_FILES["flyer"]["size"] < 4000000))
-	{  
+	if (($_FILES["image_upload_box"]["type"] == "image/jpeg" || $_FILES["image_upload_box"]["type"] == "image/pjpeg" || $_FILES["image_upload_box"]["type"] == "image/gif" || $_FILES["image_upload_box"]["type"] == "image/x-png") && ($_FILES["image_upload_box"]["size"] < 4000000))
+	{
+		
+  
 		// some settings
 		$max_upload_width = 2592;
 		$max_upload_height = 1944;
@@ -24,32 +23,33 @@ if ((isset($_POST["submitted_form"])) && ($_POST["submitted_form"] == "new_event
 		if(isset($_REQUEST['max_height_box']) and $_REQUEST['max_height_box']!='' and $_REQUEST['max_height_box']<=$max_upload_height){
 			$max_upload_height = $_REQUEST['max_height_box'];
 		}	
+
 		
 		// if uploaded image was JPG/JPEG
-		if($_FILES["flyer"]["type"] == "image/jpeg" || $_FILES["flyer"]["type"] == "image/pjpeg"){	
-			$image_source = imagecreatefromjpeg($_FILES["flyer"]["tmp_name"]);
+		if($_FILES["image_upload_box"]["type"] == "image/jpeg" || $_FILES["image_upload_box"]["type"] == "image/pjpeg"){	
+			$image_source = imagecreatefromjpeg($_FILES["image_upload_box"]["tmp_name"]);
 		}		
 		// if uploaded image was GIF
-		if($_FILES["flyer"]["type"] == "image/gif"){	
-			$image_source = imagecreatefromgif($_FILES["flyer"]["tmp_name"]);
+		if($_FILES["image_upload_box"]["type"] == "image/gif"){	
+			$image_source = imagecreatefromgif($_FILES["image_upload_box"]["tmp_name"]);
 		}	
 		// BMP doesn't seem to be supported so remove it form above image type test (reject bmps)	
 		// if uploaded image was BMP
-		if($_FILES["flyer"]["type"] == "image/bmp"){	
-			$image_source = imagecreatefromwbmp($_FILES["flyer"]["tmp_name"]);
+		if($_FILES["image_upload_box"]["type"] == "image/bmp"){	
+			$image_source = imagecreatefromwbmp($_FILES["image_upload_box"]["tmp_name"]);
 		}			
 		// if uploaded image was PNG
-		if($_FILES["flyer"]["type"] == "image/x-png"){
-			$image_source = imagecreatefrompng($_FILES["flyer"]["tmp_name"]);
+		if($_FILES["image_upload_box"]["type"] == "image/x-png"){
+			$image_source = imagecreatefrompng($_FILES["image_upload_box"]["tmp_name"]);
 		}
-		if(!is_dir("../files/locandine")){
-			mkdir("../files/locandine", 0777);
+		if(!is_dir("../files/gallery/".$_GET['galleryid']."")){
+			mkdir("../files/gallery/".$_GET['galleryid']."", 0777);
 		}
-		
-		$fileRandName=randomValue()."_".$_FILES["flyer"]["name"];
-		$remote_file = "../files/locandine/".$fileRandName;
+		$remote_file = "../files/gallery/".$_GET['galleryid']."/".$_FILES["image_upload_box"]["name"];
 		imagejpeg($image_source,$remote_file,100);
 		chmod($remote_file,0644);
+	
+	
 
 		// get width and height of original image
 		list($image_width, $image_height) = getimagesize($remote_file);
@@ -78,31 +78,24 @@ if ((isset($_POST["submitted_form"])) && ($_POST["submitted_form"] == "new_event
 		
 		imagedestroy($image_source);
 		
+		if(@$_GET['rl']==1){
+			$mysqli = new mysqli($HOST, $USER, $PASSWORD, $DB);
+			$imagePath=$_FILES["image_upload_box"]["name"];
+			$galleryId=$_GET['galleryid'];
+			if ($insert_stmt = $mysqli->prepare("INSERT INTO event_image (image_path, event_gallery) VALUES (?, ?)")) {    
+				$insert_stmt->bind_param('si', $imagePath, $galleryId); 
+				// Esegui la query ottenuta.
+				$insert_stmt->execute();
+				echo"<script>location.href='../admin.php?loc=message&msg=2005'</script>";
+			}
+			else echo"<script>location.href='../admin.php?loc=message&msg=1002'</script>";
+		}
+		
 		//header("Location: ../admin.php?loc=message&msg=2005");
-		//exit;
+		exit;
 	}
-	//else{
+	else{
 		//header("Location: ../admin.php?loc=message&msg=1002");
-		//exit;
-	//}
-}
-
-if(@$_GET['rl']==1){
-	$mysqli = new mysqli($HOST, $USER, $PASSWORD, $DB);
-	$eventTitle=$_POST['title'];
-	$eventDate=$_POST['date'];
-	$eventShortDesc=$_POST['shortDescription'];
-	if(isset($fileRandName))$eventFlyer=$fileRandName;
-	else $eventFlyer="";
-	$eventSport=$_POST['eventSport'];
-	$eventType=$_POST['eventCat'];
-	$eventInfos=$_POST['description'];
-	if ($insert_stmt = $mysqli->prepare("INSERT INTO event (event_title, event_date, event_short_description, event_flyer, sport, event_type, event_infos) VALUES (?, ?, ?, ?, ?, ?, ?)")) {    
-		$insert_stmt->bind_param('sssssss', $eventTitle, $eventDate, $eventShortDesc, $eventFlyer, $eventSport, $eventType, $eventInfos); 
-		// Esegui la query ottenuta.
-		$insert_stmt->execute();
-		echo"<script>location.href='../admin.php?loc=message&msg=2002'</script>";
+		exit;
 	}
-	else echo"<script>location.href='../admin.php?loc=message&msg=1002'</script>";
-	
 }

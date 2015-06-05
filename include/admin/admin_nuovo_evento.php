@@ -5,7 +5,7 @@
     <p><b>Inserisci i dati di un nuovo evento</p>
     <br />
     
-    <form action="actions/inserisci_evento.php?rl=1" method="post" name="new_user_form">
+    <form action="actions/inserisci_evento.php?rl=1" method="post" name="new_event_form" id="new_event_form" enctype="multipart/form-data">
     	<div class="col-md-12">
             <label for="title">Titolo dell'evento</label>
             <input type="text" name="title" id="title" class="form-control" maxlength="100" required="required"/><br />
@@ -51,6 +51,9 @@
         <div class="col-md-8">
         	<br />
         	<input type="file" id="flyer" name="flyer">
+            <input name="max_width_box" type="hidden" id="max_width_box" value="1024" size="4">
+    		<input name="max_height_box" type="hidden" id="max_height_box" value="768" size="4">
+			<input name="submitted_form" type="hidden" id="submitted_form" value="new_event_form" />
         </div>
         
         <div class="col-md-12">

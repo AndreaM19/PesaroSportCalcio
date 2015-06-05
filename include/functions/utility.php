@@ -19,3 +19,7 @@ function eventType($type){
 			break;
 	}
 }
+
+function randomValue(){
+	return rand(1, 99999);
+}

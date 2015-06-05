@@ -14,7 +14,7 @@
     <p><b>Modifica i dati dell'evento</p>
     <br />
     
-    <form action="actions/modifica_evento.php?rl=1&eventid=<?php echo $_GET['eventid']?>" method="post" name="new_user_form">
+    <form action="actions/modifica_evento.php?rl=1&eventid=<?php echo $_GET['eventid']?>" method="post" name="edit_event_form" id="edit_event_form" enctype="multipart/form-data">
     	<div class="col-md-12">
             <label for="title">Titolo dell'evento</label>
             <input type="text" name="title" id="title" class="form-control" value="<?php echo $array[1] ?>" maxlength="100" required="required"/><br />
@@ -62,6 +62,9 @@
         <div class="col-md-8">
         	<br />
         	<input type="file" id="flyer" name="flyer">
+            <input name="max_width_box" type="hidden" id="max_width_box" value="1024" size="4">
+    		<input name="max_height_box" type="hidden" id="max_height_box" value="768" size="4">
+			<input name="submitted_form" type="hidden" id="submitted_form" value="edit_event_form" />
         </div>
         
         <div class="col-md-12">

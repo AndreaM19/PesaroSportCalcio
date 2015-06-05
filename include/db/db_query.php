@@ -14,7 +14,7 @@ $SHOW_CAT_EVENTS="select id_event, event_date, event_title, event_short_descript
 
 $SHOW_EVENT_DATA="select * from event inner join sport on event.sport=sport.id_sport inner join event_type on event.event_type=event_type.id_event_type where id_event='".@$_GET['eventid']."'";
 
-$SHOW_EVENT_GALLERY="select id_event_image, image_path, id_event from event_image inner join event_gallery on event_gallery=id_event_gallery inner join event on id_event_gallery=event.event_gallery where id_event='".@$_GET['eventid']."'";
+$SHOW_EVENT_GALLERY="select id_event_image, image_path, id_event, event_image.event_gallery from event_image inner join event_gallery on event_gallery=id_event_gallery inner join event on id_event_gallery=event.event_gallery where id_event='".@$_GET['eventid']."'";
 
 $SHOW_EVENT_GALLERY_2="select * from event_gallery where event_id_event='".@$_GET['eventid']."'";
 
