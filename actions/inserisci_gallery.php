@@ -4,6 +4,10 @@ include '../include/functions/utility.php';
 include '../include/db/db_query.php';
 include '../include/db/db_function.php';
 
+//Session
+sec_session_start();
+if(login_check(new mysqli($HOST, $USER, $PASSWORD, $DB)));
+else header('Location: ../index.php?msg=1000');
 
 if(@$_GET['rl']==1){
 	$mysqli = new mysqli($HOST, $USER, $PASSWORD, $DB);

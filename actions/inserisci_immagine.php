@@ -3,6 +3,12 @@
 include '../include/db/db_data.php';
 include '../include/functions/utility.php';
 include '../include/db/db_query.php';
+include '../include/db/db_function.php';
+
+//Session
+sec_session_start();
+if(login_check(new mysqli($HOST, $USER, $PASSWORD, $DB)));
+else header('Location: ../index.php?msg=1000');
 
 // upload the file
 if ((isset($_POST["submitted_form"])) && ($_POST["submitted_form"] == "image_upload_form")) {
